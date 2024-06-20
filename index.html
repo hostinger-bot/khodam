@@ -105,10 +105,6 @@ button:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-khodamName {
-  color: white;
-}
     </style>
 </head>
 
@@ -465,11 +461,12 @@ khodamName {
                     // Tambahkan khodam lainnya sesuai kebutuhan
                 ];
                 const khodam = khodams[Math.floor(Math.random() * khodams.length)];
-                document.getElementById('khodamName').innerText = `Khodam: ${khodam.name}`;
-                document.getElementById('khodamMeaning').innerText = khodam.meaning;
-                document.getElementById('result').style.display = 'block';
-                document.getElementById('loading').style.display = 'none'; // Sembunyikan spinner
-            }, 2000); // Delay untuk simulasi loading
+document.getElementById('khodamName').innerText = `Khodam: ${khodam.name}`;
+document.getElementById('khodamName').style.color = 'white'; // Set color to white
+document.getElementById('khodamMeaning').innerText = khodam.meaning;
+document.getElementById('result').style.display = 'block';
+document.getElementById('loading').style.display = 'none'; // Sembunyikan spinner
+}, 2000) // Delay untuk simulasi loading
         }
 
         function resetForm() {
