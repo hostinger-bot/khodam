@@ -9,107 +9,217 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
     <style>
         body {
-  background-image: url("https://raw.githubusercontent.com/mininxd/cek-khodam/master/img/bg2.jpg");
-  font-family: 'Poppins', sans-serif; /* Font modern Poppins */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  min-height: 100vh;
-  margin: 0;
-  box-sizing: border-box;
-  text-align: center;
-  margin: 2em;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
+            background-color: #2c2f33;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
 
-.card {
-  background-color: rgba(147, 148, 171, 0.25);
-  padding: 20px;
-  border: 1px solid #FFA500; /* Border jingga ke kuningan */
-  border-radius: 10px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow lebih gelap */
-  backdrop-filter: blur(10px); /* Blur lebih kuat */
-  position: relative; /* Untuk positioning spinner */
-}
+        .card {
+            background-color: #23272a;
+            padding: 10px;
+            border: 2px solid #7289da;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            text-align: center;
+        }
 
-h1, p {
-  color: #FFA500; /* Warna font jingga ke kuningan */
-  margin-bottom: 20px;
-}
+        h1 {
+            color: #7289da;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+        }
 
-input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #FFA500; /* Border input */
-  border-radius: 200px;
-  text-align: center;
-  width: 80%;
-  margin-bottom: 20px;
-  background-color: transparent;
-  color: #f1f1f1;
-}
+        p {
+            color: #99aab5;
+            margin-bottom: 25px;
+            font-size: 1.2em;
+        }
 
-button {
-  background-color: #439c8f;
-  color: #ffffff;
-  padding: 10px 25px;
-  font-size: 16px;
-  border: none;
-  border-radius: 200px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-}
+        input[type="text"] {
+            padding: 15px;
+            font-size: 1em;
+            border: 2px solid #7289da;
+            border-radius: 30px;
+            text-align: center;
+            width: 80%;
+            margin-bottom: 25px;
+            background-color: transparent;
+            color: #FFFFFF;
+            transition: border-color 0.3s;
+        }
 
-button:hover {
-  background-color: #4e4aa7;
-  transform: translateY(-3px); /* Efek naik saat hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow lebih dalam saat hover */
-}
+        input[type="text"]:focus {
+            border-color: #99aab5;
+            outline: none;
+        }
 
-.footer {
-  color: #97D3FF;
-  font-weight: bold;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-}
+        button {
+            background-color: #7289da;
+            color: #FFFFFF;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
 
-#result {
-  display: none;
-}
+        button:hover {
+            background-color: #99aab5;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
 
-.loading-spinner {
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  border-top: 4px solid #FFA500; /* Warna jingga ke kuningan */
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -20px; /* Setengah dari tinggi */
-  margin-left: -20px; /* Setengah dari lebar */
-  animation: spin 1s linear infinite;
-}
+        .footer {
+            color: #7289da;
+            font-weight: bold;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+       .macan {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100px;
+      height: auto;
+      filter: drop-shadow(#fff 5px 5px 1px);
+    }
+  
+        #result {
+            display: none;
+            margin-top: 20px;
+        }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #7289da;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -25px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #khodamName {
+            color: #7289da;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        #khodamMeaning {
+            color: #99aab5;
+            font-size: 1.2em;
+        }
+
+       .history {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 650px;
+            text-align: left;
+            background-color: #2c2f33;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .history-item {
+            border-left: 4px solid #7289da;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            background-color: #36393f;
+            border-radius: 10px;
+        }
+        
+        .history-item h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .history-item p {
+            color: #b9bbbe;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+       .particle {
+            position: absolute;
+            background-color: rgba(114, 137, 218, 0.8);
+            border-radius: 50%;
+            animation: float 4s infinite;
+        }
+
+        .particle:nth-child(1) {
+            width: 10px;
+            height: 10px;
+            top: 10%;
+            left: 20%;
+            animation-duration: 5s;
+        }
+
+        .particle:nth-child(2) {
+            width: 15px;
+            height: 15px;
+            top: 30%;
+            left: 70%;
+            animation-duration: 7s;
+        }
+
+        .particle:nth-child(3) {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 40%;
+            animation-duration: 6s;
+        }
+
+        .particle:nth-child(4) {
+            width: 12px;
+            height: 12px;
+            top: 70%;
+            left: 80%;
+            animation-duration: 4s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 0.8; }
+            50% { transform: translateY(-20px); opacity: 0.4; }
+            100% { transform: translateY(0); opacity: 0.8; }
+        }
     </style>
 </head>
 
 <body>
     <div class="card">
+    <img class="macan" src="https://img1.picmix.com/output/stamp/normal/5/7/1/7/1707175_aa933.gif">
+    
         <h1>Cek Khodam</h1>
         <p>Masukkan nama untuk mengetahui khodam</p>
         <input type="text" id="nameInput" placeholder="Ketik nama kamu di sini">
@@ -121,20 +231,25 @@ button:hover {
             <p id="khodamMeaning"></p>
         </div>
     </div>
-    <div class="footer">
-        © 2024 Copyright <a target="_blank">BOTCAHX</a>
+    <div class="history" id="history">
+        <h3>Riwayat :</h3>
+        <div id="historyItems"></div>
     </div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script>
+    <script>       
         function cekKhodam() {
             const nameInput = document.getElementById('nameInput').value;
             if (!nameInput) {
                 Swal.fire({
-                    title: 'GAK BOLEH KOSONG!😡',
+                    title: 'GAK BOLEH KOSONG!',
                     icon: 'error',
                     confirmButtonText: 'OK'
                 });
-                return;
             }
             document.getElementById('loading').style.display = 'block'; // Tampilkan spinner
             setTimeout(() => {
@@ -458,20 +573,57 @@ button:hover {
                 { name: "Kardus Malas", meaning: "Selalu terlihat malas tapi selalu memberikan perlindungan yang baik" },
                 { name: "Lampu Tertidur", meaning: "Terlihat ngantuk tapi selalu memberikan cahaya yang hangat" },
                 { name: "Anjing Pelacak", meaning: "Kamu setia dan penuh dedikasi, selalu menemukan jalan menuju tujuanmu." },
-                    // Tambahkan khodam lainnya sesuai kebutuhan
                 ];
                 const khodam = khodams[Math.floor(Math.random() * khodams.length)];
-document.getElementById('khodamName').innerText = `Khodam: ${khodam.name}`;
-document.getElementById('khodamName').style.color = 'white'; // Set color to white
-document.getElementById('khodamMeaning').innerText = khodam.meaning;
-document.getElementById('result').style.display = 'block';
-document.getElementById('loading').style.display = 'none'; // Sembunyikan spinner
-}, 2000) // Delay untuk simulasi loading
+                document.getElementById('khodamName').innerText = `Khodam : ${khodam.name}`;
+                document.getElementById('khodamMeaning').innerText = khodam.meaning;
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('loading').style.display = 'none'; // Sembunyikan spinner
+                saveKhodam(nameInput, khodam.name, khodam.meaning);
+            }, 100); // Delay untuk simulasi loading
         }
 
         function resetForm() {
             document.getElementById('nameInput').value = '';
             document.getElementById('result').style.display = 'none';
+        }
+
+        function saveKhodam(name, khodamName, khodamMeaning) {
+            const khodamData = {
+                name,
+                khodamName,
+                khodamMeaning
+            };
+
+            let khodamList = localStorage.getItem('khodamList');
+            if (!khodamList) {
+                khodamList = [];
+            } else {
+                khodamList = JSON.parse(khodamList);
+            }
+
+            khodamList.unshift(khodamData); // Add new data to the beginning of the array
+            localStorage.setItem('khodamList', JSON.stringify(khodamList));
+
+            displayHistory();
+        }
+
+        function displayHistory() {
+            const historyItemsContainer = document.getElementById('historyItems');
+            historyItemsContainer.innerHTML = '';
+
+            let khodamList = localStorage.getItem('khodamList');
+            if (!khodamList) {
+                return;
+            }
+
+            khodamList = JSON.parse(khodamList);
+            khodamList.forEach(item => {
+                const historyItem = document.createElement('div');
+                historyItem.classList.add('history-item');
+                historyItem.innerHTML = `<strong>${item.name}</strong> : ${item.khodamName} - ${item.khodamMeaning}`;
+                historyItemsContainer.appendChild(historyItem);
+            });
         }
     </script>
 </body>
